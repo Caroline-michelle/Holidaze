@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./components/layout/Layout";
 
 import Home from "./pages/Home";
@@ -10,7 +11,7 @@ import CreateVenue from "./pages/CreateVenue";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path='/' element={<Home />} />
@@ -21,7 +22,7 @@ function App() {
           <Route path='/create' element={<CreateVenue />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
