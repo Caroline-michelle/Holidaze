@@ -1,7 +1,7 @@
 import { apiFetch } from "./client";
 
 export function getVenues() {
-  return apiFetch("/holidaze/venues");
+  return apiFetch("/holidaze/venues?sort=created&sortOrder=desc&limit=100");
 }
 
 export function getVenueById(id: string) {

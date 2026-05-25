@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { createVenue } from "../api/venues";
 
 function CreateVenue() {
-  const navigate = useNavigate();
-
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(100);
@@ -33,30 +31,25 @@ function CreateVenue() {
         description,
         price,
         maxGuests,
-
         media: [
           {
             url: imageUrl,
             alt: name,
           },
         ],
-
         meta: {
           wifi,
           parking,
           breakfast,
           pets,
         },
-
         location: {
           city,
           country,
         },
       });
 
-      setMessage("Venue created!");
-
-      navigate("/");
+      setMessage("Venue created! Go to Home and search for it.");
     } catch (error) {
       console.error(error);
 

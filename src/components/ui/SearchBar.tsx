@@ -6,8 +6,6 @@ type SearchBarProps = {
 function SearchBar({ searchQuery, onSearchChange }: SearchBarProps) {
   return (
     <section className='search-hero'>
-      <h2>Find your perfect stay</h2>
-
       <form className='search-bar' onSubmit={(event) => event.preventDefault()}>
         <input
           type='text'
